@@ -5,57 +5,71 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#FBFBFB"
     tools:context=".MainActivity">
 
     <TextView
         android:id="@+id/Role"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Pick"
+        android:text="@string/role"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.509"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.108" />
+        app:layout_constraintVertical_bias="0.155" />
 
     <Button
-        android:id="@+id/button"
-        android:layout_width="94dp"
-        android:layout_height="61dp"
-        android:text="Button"
-        tools:layout_editor_absoluteX="36dp"
-        tools:layout_editor_absoluteY="48dp" />
+        android:id="@+id/threeBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="16dp"
+        android:text="@string/threeBar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/button2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Button"
-        tools:layout_editor_absoluteX="272dp"
-        tools:layout_editor_absoluteY="48dp" />
+        android:layout_marginStart="240dp"
+        android:layout_marginTop="16dp"
+        android:text="@string/problem"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/textView"
-        android:layout_width="86dp"
-        android:layout_height="23dp"
-        android:text="Scan vehicle ID"
-        tools:layout_editor_absoluteX="276dp"
-        tools:layout_editor_absoluteY="289dp" />
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="140dp"
+        android:layout_marginTop="204dp"
+        android:text="@string/task"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="255dp"
-        android:layout_height="213dp"
-        app:srcCompat="@android:drawable/ic_dialog_dialer"
-        tools:layout_editor_absoluteX="78dp"
-        tools:layout_editor_absoluteY="358dp" />
+        android:id="@+id/vehiclePic"
+        android:layout_width="290dp"
+        android:layout_height="228dp"
+        android:layout_marginStart="60dp"
+        android:layout_marginTop="336dp"
+        android:background="#000000"
+        android:contentDescription="@null"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@android:drawable/ic_dialog_dialer" />
 
     <TextView
         android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="TextView"
-        tools:layout_editor_absoluteX="27dp"
-        tools:layout_editor_absoluteY="663dp" />
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="656dp"
+        android:text="@string/nextBin"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

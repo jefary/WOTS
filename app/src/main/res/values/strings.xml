@@ -1,3 +1,21 @@
 <resources>
     <string name="app_name">STOW</string>
+    <string name="role">Pick</string>
+    <string name="threeBar">find image</string>
+    <string name="problem">Problem</string>
+    <string name="nextBin">find next bin</string>
+    <string name="task">find task</string>
+    <string name="exit">exit</string>
+    <string name="username">vegbrian</string>
+    <string name="batchID">Batch ID: </string>
+    <string name="lastBin">Last Bin: </string>
+    <string name="pallet">Pallet: </string>
+    <string name="processPath">Process Path: </string>
+    <string name="unitsPicked">Units Picked: </string>
+    <string name="unitsPickedPH">Units Picked per Hour: </string>
+    <string name="main">Main</string>
+    <string name="binProblem">[B] <b>Bin</b> Problem</string>
+    <string name="skipBin">[S] <b>Skip</b> Bin</string>
+    <string name="toteFull">[F] <b>Tote</b> full</string>
+    <string name="cantScan">[Q] <b>Can't scan</b> bin</string>
 </resources>
