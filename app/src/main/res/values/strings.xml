@@ -4,7 +4,7 @@
     <string name="threeBar">find image</string>
     <string name="problem">Problem</string>
     <string name="nextBin">find next bin</string>
-    <string name="task">find task</string>
+    <string name="task">Scan <b>vehicle ID</b></string>
     <string name="exit">exit</string>
     <string name="username">vegbrian</string>
     <string name="batchID">Batch ID: </string>
@@ -14,8 +14,8 @@
     <string name="unitsPicked">Units Picked: </string>
     <string name="unitsPickedPH">Units Picked per Hour: </string>
     <string name="main">Main</string>
-    <string name="binProblem">[B] <b>Bin</b> Problem</string>
-    <string name="skipBin">[S] <b>Skip</b> Bin</string>
-    <string name="toteFull">[F] <b>Tote</b> full</string>
-    <string name="cantScan">[Q] <b>Can't scan</b> bin</string>
+    <string name="binProblem">[B] Bin Problem</string>
+    <string name="skipBin">[S] Skip Bin</string>
+    <string name="toteFull">[F] Tote full</string>
+    <string name="cantScan">[Q] Cant scan bin</string>
 </resources>

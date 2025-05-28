@@ -8,6 +8,8 @@ import androidx.core.view.WindowInsetsCompat
 import android.content.Intent
 import android.widget.Button
 
+
+
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -24,5 +26,13 @@ class MainActivity : AppCompatActivity() {
             val intent = Intent(this, ThreeBarActivity::class.java)
             startActivity(intent)
         }
+
+        val problemButton = findViewById<Button>(R.id.button2)
+        problemButton.setOnClickListener {
+            val intent = Intent(this, ProblemActivity::class.java)
+            startActivity(intent)
+        }
+
+
     }
 }

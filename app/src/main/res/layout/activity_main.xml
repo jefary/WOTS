@@ -15,10 +15,11 @@
         android:text="@string/role"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.509"
+        app:layout_constraintHorizontal_bias="0.505"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.155" />
+        app:layout_constraintVertical_bias="0.037"
+        android:textSize="20sp" />
 
     <Button
         android:id="@+id/threeBar"
@@ -34,7 +35,7 @@
         android:id="@+id/button2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="240dp"
+        android:layout_marginStart="292dp"
         android:layout_marginTop="16dp"
         android:text="@string/problem"
         app:layout_constraintStart_toStartOf="parent"
@@ -44,9 +45,10 @@
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="140dp"
-        android:layout_marginTop="204dp"
+        android:layout_marginStart="124dp"
+        android:layout_marginTop="100dp"
         android:text="@string/task"
+        android:textSize="24sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
