@@ -8,7 +8,7 @@ import androidx.core.view.WindowInsetsCompat
 import android.content.Intent
 import android.widget.Button
 
-
+fun
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -32,6 +32,7 @@ class MainActivity : AppCompatActivity() {
             val intent = Intent(this, ProblemActivity::class.java)
             startActivity(intent)
         }
+
 
 
     }
