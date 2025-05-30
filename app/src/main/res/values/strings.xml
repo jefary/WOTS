@@ -4,7 +4,7 @@
     <string name="threeBar">find image</string>
     <string name="problem">Problem</string>
     <string name="nextBin">find next bin</string>
-    <string name="task">Scan <b>vehicle ID</b></string>
+    <string name="task">Scan <b>dropzone</b></string>
     <string name="exit">exit</string>
     <string name="username">vegbrian</string>
     <string name="batchID">Batch ID: </string>
