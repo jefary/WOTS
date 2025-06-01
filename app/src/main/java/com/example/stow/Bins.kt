@@ -1,14 +1,14 @@
 package com.example.stow
 
-class Vehicle {
-    private var _id: String= ""
+class Bins {
+    private var _name: String = ""
     val hashMap = HashMap<String, Items>()
 
-    var id: String
-        get() = _id
+    var name: String
+        get() = _name
         set(value) {
             if (value.isNotEmpty()) {
-                _id = value
+                _name = value
             }
         }
 

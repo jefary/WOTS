@@ -6,9 +6,9 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import android.content.Intent
+import android.text.Html
 import android.widget.Button
-
-fun
+import android.widget.TextView
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -31,6 +31,11 @@ class MainActivity : AppCompatActivity() {
         problemButton.setOnClickListener {
             val intent = Intent(this, ProblemActivity::class.java)
             startActivity(intent)
+        }
+
+        val textView = findViewById<TextView>(R.id.textView)
+        textView.setOnClickListener {
+            textView.text = Html.fromHtml("Scan <b>vehicle</b>", Html.FROM_HTML_MODE_LEGACY)
         }
 
 

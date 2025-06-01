@@ -1,7 +1,5 @@
 package com.example.stow
 
 class User  {
-    val name: String,
-    val order: Order
-
+    val name: String = ""
 }
