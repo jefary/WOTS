@@ -7,6 +7,7 @@ import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import android.widget.Button
 import android.content.Intent
+import android.widget.TextView
 
 class ThreeBarActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -21,8 +22,12 @@ class ThreeBarActivity : AppCompatActivity() {
 
         val exitButton = findViewById<Button>(R.id.exit)
         exitButton.setOnClickListener {
-            val intent = Intent(this, MainActivity::class.java)
-            startActivity(intent)
+            finish()
         }
+
+        val currRate = findViewById<TextView> (R.id.rate)
+        currRate.text = "Units picked: ${User.rate}"
+
+
     }
 }

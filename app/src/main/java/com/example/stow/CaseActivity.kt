@@ -12,12 +12,13 @@ import android.widget.ImageView
 import android.widget.TextView
 import android.util.Log
 
-class MainActivity : AppCompatActivity() {
+class CaseActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
+        Log.d("CaseActivity", "Start of CaseActivity")
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
-        setContentView(R.layout.activity_main)
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
+        setContentView(R.layout.activity_case)
+        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.caseA)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
@@ -28,6 +29,7 @@ class MainActivity : AppCompatActivity() {
             val intent = Intent(this, ThreeBarActivity::class.java)
             startActivity(intent)
         }
+        Log.d("CaseActivity", "Middle of CaseActivity")
 
         val problemButton = findViewById<Button>(R.id.button2)
         problemButton.setOnClickListener {
@@ -37,9 +39,11 @@ class MainActivity : AppCompatActivity() {
 
         val nextButton = findViewById<Button>(R.id.nextButton)
         nextButton.setOnClickListener {
-            val intent = Intent(this, VehicleActivity::class.java)
+            val intent = Intent(this, BinActivity::class.java)
             startActivity(intent)
         }
-        Log.d("MainActivity", "End of Main ")
+
+        Log.d("CaseActivity", "End of CaseActivity")
+
     }
 }

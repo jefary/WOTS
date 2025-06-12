@@ -7,17 +7,17 @@ import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import android.content.Intent
 import android.text.Html
+import android.util.Log
 import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
-import android.util.Log
 
-class MainActivity : AppCompatActivity() {
+class BinActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
-        setContentView(R.layout.activity_main)
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
+        setContentView(R.layout.activity_bin)
+        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.bin)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
@@ -37,9 +37,12 @@ class MainActivity : AppCompatActivity() {
 
         val nextButton = findViewById<Button>(R.id.nextButton)
         nextButton.setOnClickListener {
-            val intent = Intent(this, VehicleActivity::class.java)
+            val intent = Intent(this, CaseActivity::class.java)
             startActivity(intent)
         }
-        Log.d("MainActivity", "End of Main ")
+
+        User.rate++
+        Log.d("Rate", "Current rate: ${User.rate}")
+
     }
 }

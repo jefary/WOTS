@@ -24,5 +24,12 @@ class ProblemActivity : AppCompatActivity() {
             val intent = Intent(this, MainActivity::class.java)
             startActivity(intent)
         }
+
+        val  toteFull = findViewById<Button> (R.id.textView14)
+        toteFull.setOnClickListener() {
+            val intent = Intent(this, MainActivity::class.java)
+            startActivity(intent)
+        }
+
     }
 }

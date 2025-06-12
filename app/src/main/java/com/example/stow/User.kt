@@ -1,5 +1,6 @@
 package com.example.stow
 
-class User  {
-    val name: String = ""
+object User  {
+    var name: String = ""
+    var rate: Int = 0
 }
