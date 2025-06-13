@@ -2,7 +2,10 @@ package com.example.stow
 
 import android.content.Intent
 import android.os.Bundle
+import android.text.Editable
+import android.text.TextWatcher
 import android.widget.Button
+import android.widget.EditText
 import androidx.activity.enableEdgeToEdge
 import com.google.android.material.snackbar.Snackbar
 import androidx.appcompat.app.AppCompatActivity
@@ -25,22 +28,31 @@ class DropzoneActivity : AppCompatActivity() {
             insets
         }
 
-        val threeBarButton = findViewById<Button>(R.id.threeBar)
+        val threeBarButton = findViewById<Button>(R.id.info)
         threeBarButton.setOnClickListener {
             val intent = Intent(this, ThreeBarActivity::class.java)
             startActivity(intent)
         }
 
-        val problemButton = findViewById<Button>(R.id.button2)
+        val problemButton = findViewById<Button>(R.id.problem)
         problemButton.setOnClickListener {
             val intent = Intent(this, ProblemActivity::class.java)
             startActivity(intent)
         }
 
-        val nextButton = findViewById<Button>(R.id.nextButton)
-        nextButton.setOnClickListener {
-            val intent = Intent(this, VehicleActivity::class.java)
-            startActivity(intent)
-        }
+        val inputField = findViewById<EditText>(R.id.editText)
+        inputField.addTextChangedListener(object : TextWatcher {
+            override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {}
+
+            override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
+                if (!s.isNullOrBlank()) {
+                    val intent = Intent(this@DropzoneActivity, VehicleActivity::class.java)
+                    startActivity(intent)
+                }
+            }
+
+            override fun afterTextChanged(s: Editable?) {}
+        })
+
     }
 }

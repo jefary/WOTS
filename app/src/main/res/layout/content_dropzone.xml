@@ -17,7 +17,7 @@
         android:background="#09024d">
 
         <Button
-            android:id=""
+            android:id="@+id/info"
             android:layout_width="125dp"
             android:layout_height="100dp"
             android:text="@string/threeBar" />
@@ -32,6 +32,7 @@
             android:textStyle="bold" />
 
         <Button
+            android:id="@+id/problem"
             android:layout_width="125dp"
             android:layout_height="100dp"
             android:text="@string/problem" />

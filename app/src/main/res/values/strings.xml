@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">STOW</string>
     <string name="role">Stow</string>
-    <string name="threeBar">find image</string>
+    <string name="threeBar">info</string>
     <string name="problem">Problem</string>
     <string name="RecBin">Recommended bin:</string>
     <string name="task">Scan <b>Dropzone</b></string>
