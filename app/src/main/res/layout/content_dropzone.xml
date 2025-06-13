@@ -17,6 +17,7 @@
         android:background="#09024d">
 
         <Button
+            android:id=""
             android:layout_width="125dp"
             android:layout_height="100dp"
             android:text="@string/threeBar" />
@@ -89,7 +90,15 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        android:background="#9c9c9c">
+        android:background="#9c9c9c"
+        android:gravity="center">
 
-        </LinearLayout>
+
+        <EditText
+            android:id="@+id/editText"
+            android:layout_width="160dp"
+            android:layout_height="match_parent"
+            android:hint="Edit Here" />
+
+    </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

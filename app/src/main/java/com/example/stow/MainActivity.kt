@@ -37,7 +37,7 @@ class MainActivity : AppCompatActivity() {
 
         val nextButton = findViewById<Button>(R.id.nextButton)
         nextButton.setOnClickListener {
-            val intent = Intent(this, VehicleActivity::class.java)
+            val intent = Intent(this, DropzoneActivity::class.java)
             startActivity(intent)
         }
         Log.d("MainActivity", "End of Main ")

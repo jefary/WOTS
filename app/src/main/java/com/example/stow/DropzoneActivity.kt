@@ -1,8 +1,13 @@
 package com.example.stow
 
+import android.content.Intent
 import android.os.Bundle
+import android.widget.Button
+import androidx.activity.enableEdgeToEdge
 import com.google.android.material.snackbar.Snackbar
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.view.ViewCompat
+import androidx.core.view.WindowInsetsCompat
 import androidx.navigation.findNavController
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.navigateUp
@@ -10,32 +15,32 @@ import androidx.navigation.ui.setupActionBarWithNavController
 import com.example.stow.databinding.ActivityDropzoneBinding
 
 class DropzoneActivity : AppCompatActivity() {
-
-    private lateinit var appBarConfiguration: AppBarConfiguration
-    private lateinit var binding: ActivityDropzoneBinding
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
-        binding = ActivityDropzoneBinding.inflate(layoutInflater)
-        setContentView(binding.root)
-
-        setSupportActionBar(binding.toolbar)
-
-        val navController = findNavController(R.id.nav_host_fragment_content_dropzone)
-        appBarConfiguration = AppBarConfiguration(navController.graph)
-        setupActionBarWithNavController(navController, appBarConfiguration)
-
-        binding.fab.setOnClickListener { view ->
-            Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                .setAction("Action", null)
-                .setAnchorView(R.id.fab).show()
+        enableEdgeToEdge()
+        setContentView(R.layout.activity_dropzone)
+        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.dropzone)) { v, insets ->
+            val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
+            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
+            insets
         }
-    }
 
-    override fun onSupportNavigateUp(): Boolean {
-        val navController = findNavController(R.id.nav_host_fragment_content_dropzone)
-        return navController.navigateUp(appBarConfiguration)
-                || super.onSupportNavigateUp()
+        val threeBarButton = findViewById<Button>(R.id.threeBar)
+        threeBarButton.setOnClickListener {
+            val intent = Intent(this, ThreeBarActivity::class.java)
+            startActivity(intent)
+        }
+
+        val problemButton = findViewById<Button>(R.id.button2)
+        problemButton.setOnClickListener {
+            val intent = Intent(this, ProblemActivity::class.java)
+            startActivity(intent)
+        }
+
+        val nextButton = findViewById<Button>(R.id.nextButton)
+        nextButton.setOnClickListener {
+            val intent = Intent(this, VehicleActivity::class.java)
+            startActivity(intent)
+        }
     }
 }
