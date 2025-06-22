@@ -1,5 +1,16 @@
 package com.example.stow
 
+import androidx.room.Entity
+import androidx.room.PrimaryKey
+
+@Entity(tableName = "vehicle")
+data class Vehicle (
+    @PrimaryKey val vehicleID: String,
+    val label: String,
+    val userID: String,
+    val hashMap: HashMap<String, Items>
+)
+/*
 class Vehicle {
     private var _id: String= ""
     val hashMap = HashMap<String, Items>()
@@ -24,3 +35,5 @@ class Vehicle {
         hashMap.remove(i.prodName)
     }
 }
+
+ */

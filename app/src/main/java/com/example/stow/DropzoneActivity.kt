@@ -4,6 +4,8 @@ import android.content.Intent
 import android.os.Bundle
 import android.text.Editable
 import android.text.TextWatcher
+import android.view.KeyEvent
+import android.view.inputmethod.EditorInfo
 import android.widget.Button
 import android.widget.EditText
 import androidx.activity.enableEdgeToEdge
@@ -41,18 +43,15 @@ class DropzoneActivity : AppCompatActivity() {
         }
 
         val inputField = findViewById<EditText>(R.id.editText)
-        inputField.addTextChangedListener(object : TextWatcher {
-            override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {}
+        val enterButton = findViewById<Button>(R.id.enterButton)
+        inputField.setText("")
 
-            override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
-                if (!s.isNullOrBlank()) {
-                    val intent = Intent(this@DropzoneActivity, VehicleActivity::class.java)
-                    startActivity(intent)
-                }
+        enterButton.setOnClickListener {
+            val inputText = inputField.text.toString()
+            if (inputText.isNotBlank()) {
+                val intent = Intent(this, VehicleActivity::class.java)
+                startActivity(intent)
             }
-
-            override fun afterTextChanged(s: Editable?) {}
-        })
-
+        }
     }
 }

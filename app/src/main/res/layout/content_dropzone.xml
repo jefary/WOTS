@@ -20,7 +20,8 @@
             android:id="@+id/info"
             android:layout_width="125dp"
             android:layout_height="100dp"
-            android:text="@string/threeBar" />
+            android:text="@string/threeBar"
+            android:background="#09024d"/>
 
         <TextView
             android:layout_width="160dp"
@@ -35,7 +36,8 @@
             android:id="@+id/problem"
             android:layout_width="125dp"
             android:layout_height="100dp"
-            android:text="@string/problem" />
+            android:text="@string/problem"
+            android:background="#09024d"/>
 
     </LinearLayout>
 
@@ -100,6 +102,12 @@
             android:layout_width="160dp"
             android:layout_height="match_parent"
             android:hint="Edit Here" />
+
+        <Button
+            android:id="@+id/enterButton"
+            android:layout_width="160dp"
+            android:layout_height="match_parent"
+            android:text="@string/enter" />
 
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

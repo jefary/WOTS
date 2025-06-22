@@ -7,72 +7,109 @@
     android:background="#FBFBFB"
     tools:context=".VehicleActivity">
 
-    <TextView
-        android:id="@+id/Role"
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:id="@+id/topBar"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/role"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.505"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.037"
-        android:textSize="20sp" />
+        android:background="#09024d">
 
-    <Button
-        android:id="@+id/threeBar"
-        android:layout_width="wrap_content"
+        <Button
+            android:id="@+id/info"
+            android:layout_width="125dp"
+            android:layout_height="100dp"
+            android:text="@string/threeBar"
+            android:background="#09024d"/>
+
+        <TextView
+            android:layout_width="160dp"
+            android:layout_height="60dp"
+            android:text="@string/role"
+            android:textAlignment="center"
+            android:textSize="24sp"
+            android:textColor="#FFFF"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/problem"
+            android:layout_width="125dp"
+            android:layout_height="100dp"
+            android:text="@string/problem"
+            android:background="#09024d"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/lowBar"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="4dp"
-        android:layout_marginTop="16dp"
-        android:text="@string/threeBar"
+        android:orientation="vertical"
+        app:layout_constraintTop_toBottomOf="@id/topBar"
+        app:layout_constraintBottom_toTopOf="@id/keyboard"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent">
 
-    <Button
-        android:id="@+id/button2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="292dp"
-        android:layout_marginTop="16dp"
-        android:text="@string/problem"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:textSize="24sp"
+            android:textAlignment="center"
+            android:gravity="center"
+            android:text="@string/error"
+            android:visibility="gone"
+            android:textColor="#FFFF"
+            android:background="#FF0000"/>
 
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="148dp"
-        android:layout_marginTop="104dp"
-        android:text="@string/scanVehicle"
-        android:textSize="24sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:textSize="24sp"
+            android:textAlignment="center"
+            android:gravity="center"
+            android:text="@string/scanVehicle" />
 
-    <ImageView
-        android:id="@+id/vehicleButton"
-        android:layout_width="290dp"
-        android:layout_height="228dp"
-        android:layout_marginStart="60dp"
-        android:layout_marginTop="336dp"
-        android:background="#000000"
-        android:contentDescription="@null"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@android:drawable/ic_dialog_dialer"
-        android:clickable="true"
-        android:focusable="true" />
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="550dp"
+            android:src="@drawable/qrcodee"/>
 
-    <Button
-        android:id="@+id/nextButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="160dp"
-        android:layout_marginTop="216dp"
-        android:text="@string/next"
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="50sp"
+            android:text="@string/next"
+            android:background="#000000"
+            android:textColor="@color/white"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/keyboard"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@id/lowBar"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        android:background="#9c9c9c"
+        android:gravity="center">
+
+
+        <EditText
+            android:id="@+id/editText"
+            android:layout_width="160dp"
+            android:layout_height="match_parent"
+            android:hint="Edit Here" />
+
+        <Button
+            android:id="@+id/enterButton"
+            android:layout_width="160dp"
+            android:layout_height="match_parent"
+            android:text="@string/enter" />
+
+    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

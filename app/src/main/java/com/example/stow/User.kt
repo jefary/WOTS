@@ -1,6 +1,11 @@
 package com.example.stow
+import androidx.room.Entity
+import androidx.room.PrimaryKey
 
-object User  {
-    var name: String = ""
-    var rate: Int = 0
-}
+
+@Entity(tableName = "user")
+data class User (
+    @PrimaryKey val userID: String,
+    val name: String,
+    val rate: Int
+)

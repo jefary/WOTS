@@ -18,10 +18,11 @@
     <string name="skipBin">[S] Skip Bin</string>
     <string name="toteFull">[F] Tote full</string>
     <string name="cantScan">[Q] Cant scan bin</string>
-    <string name="scanCase">Scan <b>Case</b></string>
+    <string name="scanCase">Scan <b>Case Sticker</b></string>
     <string name="scanBin"> Scan <b>Bin</b></string>
-    <string name="scanVehicle">Scan <b>Vehicle</b></string>
+    <string name="scanVehicle">Scan <b>vehicle ID</b></string>
     <string name ="error"><b>Error: Scan valid dropzone</b></string>
+    <string name ="enter">Enter</string>
     <!-- Strings used for fragments for navigation -->
     <string name="first_fragment_label">First Fragment</string>
     <string name="second_fragment_label">Second Fragment</string>
