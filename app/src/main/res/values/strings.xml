@@ -21,8 +21,14 @@
     <string name="scanCase">Scan <b>Case Sticker</b></string>
     <string name="scanBin"> Scan <b>Bin</b></string>
     <string name="scanVehicle">Scan <b>vehicle ID</b></string>
-    <string name ="error"><b>Error: Scan valid dropzone</b></string>
-    <string name ="enter">Enter</string>
+    <string name="error"><b>Error: Scan valid dropzone</b></string>
+    <string name="enter">Enter</string>
+    <string name="login"><b>Login</b></string>
+    <string name="enterUsername">Enter username</string>
+    <string name="enterPassword">Enter password</string>
+    <string name="signIn">Sign in</string>
+    <string name="createAccount">Create new account</string>
+    <string name="reenterPassword">Re-enter password</string>
     <!-- Strings used for fragments for navigation -->
     <string name="first_fragment_label">First Fragment</string>
     <string name="second_fragment_label">Second Fragment</string>

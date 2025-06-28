@@ -53,7 +53,7 @@ class BinActivity : AppCompatActivity() {
             }
         }
 
-        User.rate++
+        //User.rate++
 
     }
 }

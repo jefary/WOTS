@@ -7,5 +7,5 @@ import androidx.room.PrimaryKey
 data class User (
     @PrimaryKey val userID: String,
     val name: String,
-    val rate: Int
+    var rate: Int
 )

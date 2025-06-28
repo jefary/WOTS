@@ -8,7 +8,6 @@ data class Vehicle (
     @PrimaryKey val vehicleID: String,
     val label: String,
     val userID: String,
-    val hashMap: HashMap<String, Items>
 )
 /*
 class Vehicle {

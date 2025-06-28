@@ -24,10 +24,10 @@ class ThreeBarActivity : AppCompatActivity() {
         exitButton.setOnClickListener {
             finish()
         }
-
+/*
         val currRate = findViewById<TextView> (R.id.rate)
         currRate.text = "Units picked: ${User.rate}"
-
+*/
 
     }
 }
