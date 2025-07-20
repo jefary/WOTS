@@ -29,6 +29,8 @@ class LoginActivity : AppCompatActivity() {
         val loginButton = findViewById<Button>(R.id.loginButton)
         loginButton.setOnClickListener {
             //Create a instance of a class User
+            val loginInput = findViewById<EditText>(R.id.loginText)
+
         }
 
         val createButton = findViewById<Button>(R.id.createButton)
