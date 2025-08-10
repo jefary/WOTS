@@ -20,6 +20,11 @@ class ThreeBarActivity : AppCompatActivity() {
             insets
         }
 
+
+
+       val name = intent.getStringExtra("USER_NAME")
+        findViewById<TextView>(R.id.username).text = name
+
         val exitButton = findViewById<Button>(R.id.exit)
         exitButton.setOnClickListener {
             finish()

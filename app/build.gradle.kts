@@ -59,4 +59,6 @@ dependencies {
 
     implementation("androidx.constraintlayout:constraintlayout:2.1.4")
 
+    implementation("androidx.lifecycle:lifecycle-runtime-ktx:2.8.4")
+
 }
